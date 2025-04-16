@@ -1,0 +1,34 @@
+# macOS system files
+.DS_Store
+
+# Node modules and lock files
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Sass cache
+.sass-cache/
+
+# Composer (if used)
+vendor/
+composer.lock
+
+# WordPress core (if accidentally added)
+wp-admin/
+wp-includes/
+wp-config.php
+wp-content/uploads/
+
+# Log files
+*.log
+
+# Build / compiled assets
+dist/
+build/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

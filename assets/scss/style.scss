@@ -1,0 +1,22 @@
+// Variables
+$primary-color: #e94e77;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Body base
+body {
+  font-family: sans-serif;
+  background-color: #dcdcdc;
+  color: #222;
+}
+
+// Link styling
+a {
+  color: $primary-color;
+  text-decoration: none;
+}

@@ -7,6 +7,18 @@
  * @package huasdogs
  */
 
+function huasdogs_enqueue_styles()
+{
+	wp_enqueue_style(
+		'huasdogs-style',
+		get_template_directory_uri() . '/assets/css/style.css',
+		[],
+		filemtime(get_template_directory() . '/assets/css/style.css')
+	);
+}
+add_action('wp_enqueue_scripts', 'huasdogs_enqueue_styles');
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );

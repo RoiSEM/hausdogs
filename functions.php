@@ -18,6 +18,12 @@ function huasdogs_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'huasdogs_enqueue_styles');
 
+function doghause_enqueue_fonts()
+{
+	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap', false);
+}
+add_action('wp_enqueue_scripts', 'doghause_enqueue_fonts');
+
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.

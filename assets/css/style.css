@@ -8,6 +8,14 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
   font-family: sans-serif;
   background-color: #dde7e3;
   color: #222;
@@ -7418,6 +7426,10 @@ ul.icons {
 
 .spotlight {
   background-color: #fdfdfd;
+}
+
+footer {
+  background-attachment: #fdfdfd;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,14 @@ $white: #fff;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
 // Body base
 body {
   font-family: sans-serif;
@@ -370,4 +378,7 @@ main {
 }
 .spotlight{
   background-color: #fdfdfd;
+}
+footer{
+	background-attachment: #fdfdfd;
 }

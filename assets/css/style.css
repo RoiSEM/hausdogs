@@ -13,10 +13,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
+  color: #534741;
+  font-weight: 600;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #dde7e3;
   color: #222;
   overflow-x: hidden;

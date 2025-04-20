@@ -12,9 +12,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   color: #534741;
-  font-weight: 600;
+  font-family: Poppins;
+  font-weight: 800;
 }
 
 body {
@@ -7431,7 +7432,7 @@ ul.icons {
 }
 
 footer {
-  background-attachment: #fdfdfd;
+  background-color: #fdfdfd;
 }
 
 /*# sourceMappingURL=style.css.map */

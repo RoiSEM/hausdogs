@@ -15,10 +15,11 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main ">
+		<div class="container">
 
-		<?php
-		while ( have_posts() ) :
+			<?php
+			while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
@@ -29,8 +30,8 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
-		?>
-
+			?>
+		</div>
 	</main><!-- #main -->
 
 <?php

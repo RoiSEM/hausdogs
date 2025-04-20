@@ -153,7 +153,17 @@ function huasdogs_scripts() {
 	wp_enqueue_style( 'huasdogs-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'huasdogs-style', 'rtl', 'replace' );
 
+	// Navigation script
 	wp_enqueue_script( 'huasdogs-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	
+	// Theme scripts
+	wp_enqueue_script( 'jquery' ); // Use WordPress built-in jQuery
+	wp_enqueue_script( 'jquery-scrollex', get_template_directory_uri() . '/js/jquery.scrollex.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'jquery-scrolly', get_template_directory_uri() . '/js/jquery.scrolly.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'browser', get_template_directory_uri() . '/js/browser.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'breakpoints', get_template_directory_uri() . '/js/breakpoints.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'util', get_template_directory_uri() . '/js/util.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery', 'jquery-scrollex', 'jquery-scrolly', 'browser', 'breakpoints', 'util'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

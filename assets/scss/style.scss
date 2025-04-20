@@ -1,5 +1,9 @@
 // Variables
 $primary-color: #e94e77;
+$secondary-color: #0073aa;
+$dark-gray: #333;
+$light-gray: #f8f8f8;
+$white: #fff;
 
 // Reset
 * {
@@ -11,38 +15,78 @@ $primary-color: #e94e77;
 // Body base
 body {
   font-family: sans-serif;
-  background-color: #dcdcdc;
+  background-color: #dde7e3;
   color: #222;
+	overflow-x: hidden;
 }
 
 // Link styling
 a {
   color: $primary-color;
   text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover, &:focus {
+    color: darken($primary-color, 10%);
+  }
 }
 
+// Import navigation styles
+@import 'navigation';
+
 main {
-  margin-top: 150px;
+  margin-top: 90px;
   z-index: 1;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0  1rem;
+  height: 90px;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  li {
+    padding-left: 1.5rem;
+    list-style: none;
+  }
 }
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 32px;
   position: fixed;
-  height: 150px;
+  height: 90px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: gray;
+  background-color: rgba(255, 255, 255, 0.349);
 }
+.custom-logo{
+	width: 100px;
+	height: auto;
+}
+.site-title, .site-description {
+	display: none;
+}
+
+
 .hero {
-  background-color: #fff;
+  background-color: #dde7e3;
   text-align: center;
-  height: 90vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,14 +114,17 @@ main {
     }
   }
 }
+
 .container {
   max-width: 80%;    
   margin: 0 auto;
 }
+
 .container-fluid {
   max-width: 100%;    
   margin: 0 auto;
 }
+
 .benefits {
   display: flex;
   height: 25vh;
@@ -104,6 +151,7 @@ main {
     }
   }
 }
+
 .benefits:nth-child(2) {
   display: flex;
   height: 25vh;
@@ -129,4 +177,194 @@ main {
       background-color: rgb(20, 180, 103);
     }
   }
+}
+
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import 'fontawesome-all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i');
+
+/*
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
+	));
+
+// Mixins.
+
+	@mixin color($p) {
+		@include color-typography($p);
+		@include color-box($p);
+		@include color-button($p);
+		@include color-form($p);
+		@include color-icon($p);
+		@include color-list($p);
+		@include color-section($p);
+		@include color-table($p);
+		@include color-banner($p);
+		@include color-spotlight($p);
+		@include color-gallery($p);
+		@include color-items($p);
+		@include color-index($p);
+	}
+
+// Phone.
+
+	@mixin phone($image-width) {
+		@include vendor('flex-grow', '0');
+		@include vendor('flex-shrink', '0');
+		border-radius: 0;
+		border: solid _size(border-width);
+
+		img {
+			@include vendor('object-fit', 'cover');
+			@include vendor('object-position', 'center');
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			background-position: center;
+			background-repeat: no-repeat;
+			border: solid _size(border-width);
+			border-bottom: 0;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			background-position: center;
+			background-repeat: no-repeat;
+			border: solid _size(border-width);
+			border-top: 0;
+		}
+
+		@include resize-phone($image-width, 1);
+	}
+
+	@mixin resize-phone($image-width, $image-factor) {
+		$image-pad-top: 2.5rem;
+		$image-pad-bottom: 3rem;
+		$image-height: ($image-width * (1920 / 1080));
+
+		width: ($image-width * $image-factor);
+		height: (($image-width * $image-factor) * (1920 / 1080));
+		margin-top: ($image-pad-top * $image-factor);
+		margin-bottom: (_size(element-margin) + ($image-pad-bottom * $image-factor));
+
+		&:before {
+			height: ($image-pad-top * $image-factor);
+			background-size: (64px * $image-factor) (32px * $image-factor);
+			margin-top: (($image-pad-top * $image-factor) * -1);
+			border-radius: (1rem * $image-factor) (1rem * $image-factor) 0 0;
+		}
+
+		&:after {
+			height: ($image-pad-bottom * $image-factor);
+			background-size: (64px * $image-factor) (32px * $image-factor);
+			margin-bottom: (($image-pad-bottom * $image-factor) * -1);
+			border-radius: 0 0 (1rem * $image-factor) (1rem * $image-factor);
+		}
+	}
+
+	@mixin color-phone($p) {
+		border-color: _palette($p, border);
+		background-color: _palette($p, border);
+
+		@if ($p != 'invert') {
+			border-width: 0;
+		}
+		@else {
+			border-width: _size(border-width);
+		}
+
+		&:before {
+			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="32px" viewBox="0 0 64 32" zoomAndPan="disable"><style>rect {fill: transparent; stroke: #{_palette($p, border)}; stroke-width: #{_size(border-width)}; }</style><rect rx="4" ry="4" x="11" y="12" width="42" height="8" vector-effect="non-scaling-stroke" /></svg>');
+			border-color: _palette($p, border);
+
+			@if ($p == 'invert') {
+				width: calc(100% + #{_size(border-width) * 2});
+				margin-left: (_size(border-width) * -1);
+			}
+			@else {
+				width: 100%;
+			}
+		}
+
+		&:after {
+			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="32px" viewBox="0 0 64 32" zoomAndPan="disable"><style>circle {fill: transparent; stroke: #{_palette($p, border)}; stroke-width: #{_size(border-width)}; }</style><circle cx="32" cy="16" r="14" vector-effect="non-scaling-stroke" /></svg>');
+			border-color: _palette($p, border);
+
+			@if ($p == 'invert') {
+				width: calc(100% + #{_size(border-width) * 2});
+				margin-left: (_size(border-width) * -1);
+			}
+			@else {
+				width: 100%;
+			}
+		}
+	}
+
+	@mixin color-phone-variant($v, $p) {
+		@if ($v == 'android') {
+			&:after {
+				background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="32px" viewBox="0 0 64 32" zoomAndPan="disable"><style>rect {fill: transparent; stroke: #{_palette($p, border)}; stroke-width: #{_size(border-width)}; }</style><rect rx="4" ry="4" x="6" y="4" width="52" height="24" vector-effect="non-scaling-stroke" /></svg>');
+			}
+		}
+		@else if ($p == 'iphone') {
+			// ...
+		}
+	}
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/section';
+	@import 'components/table';
+	@import 'components/banner';
+	@import 'components/spotlight';
+	@import 'components/gallery';
+	@import 'components/wrapper';
+	@import 'components/items';
+	@import 'components/index';
+
+// Layout.
+
+	@import 'layout/wrapper';
+
+		ul.icons {
+    justify-content: center;
 }

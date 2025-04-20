@@ -11,9 +11,9 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
+		<div class="container">
+			<?php
+			while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
@@ -32,7 +32,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		</div>
 	</main><!-- #main -->
 
 <?php

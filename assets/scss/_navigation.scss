@@ -1,0 +1,179 @@
+// Main Navigation Styling - most of these styles have been moved to style.scss
+// This file is kept for reference but most styles are now in the main stylesheet
+
+// Additional navigation styling can be added here if needed
+.dropdown-toggle {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  color: $dark-gray;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.25rem;
+  cursor: pointer;
+  
+  &:hover, &:focus {
+    color: $primary-color;
+    outline: none;
+  }
+  
+  &[aria-expanded="true"] {
+    transform: rotate(180deg);
+  }
+  
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// Main Navigation Styling
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  
+  // Mobile menu toggle button
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover, &:focus {
+      background-color: #f8f8f8;
+      outline: none;
+    }
+    
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  // Main menu container
+  #primary-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+    
+    &.toggled {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      
+      @media screen and (min-width: 768px) {
+        position: static;
+        box-shadow: none;
+      }
+    }
+    
+    // Menu items
+    li {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      
+      @media screen and (min-width: 768px) {
+        margin-right: 1.5rem;
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      
+      // Menu item links
+      a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        
+        &:hover, &:focus {
+          color: #0073aa;
+          text-decoration: none;
+        }
+        
+        @media screen and (min-width: 768px) {
+          padding: 0.5rem 0;
+        }
+      }
+      
+      // Current/active menu item
+      &.current-menu-item > a, 
+      &.current_page_item > a {
+        color: #0073aa;
+        font-weight: 600;
+      }
+      
+      // Submenu handling
+      &.menu-item-has-children {
+        > a::after {
+          content: "▼";
+          display: inline-block;
+          margin-left: 0.5rem;
+          font-size: 0.6rem;
+          vertical-align: middle;
+        }
+        
+        &:hover > .sub-menu {
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
+      }
+      
+      // Submenu styling
+      .sub-menu {
+        display: none;
+        margin: 0;
+        padding: 0.5rem 0;
+        list-style: none;
+        background: #f8f8f8;
+        
+        @media screen and (min-width: 768px) {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 200px;
+          background: white;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 99;
+          border-radius: 4px;
+        }
+        
+        &.toggled {
+          display: block;
+        }
+        
+        li {
+          margin: 0;
+          
+          a {
+            padding: 0.5rem 2rem;
+            
+            @media screen and (min-width: 768px) {
+              padding: 0.75rem 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+} 

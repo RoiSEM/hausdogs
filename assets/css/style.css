@@ -476,7 +476,7 @@ body {
 }
 
 body, input, select, textarea {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.65;
@@ -494,7 +494,7 @@ a:hover {
 }
 
 strong, b {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 em, i {
@@ -511,7 +511,7 @@ p.major {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.375;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
   margin: 0 0 1rem 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1995,8 +1995,8 @@ button,
   border: 0;
   cursor: pointer;
   display: inline-block;
-  font-weight: 400;
-  letter-spacing: 0.125em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -2179,7 +2179,7 @@ form > .fields > .field.quarter {
 label {
   display: block;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 1rem 0;
 }
 
@@ -2550,7 +2550,7 @@ dl {
 }
 dl dt {
   display: block;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 1rem 0;
 }
 dl dd {
@@ -2744,7 +2744,7 @@ table td {
 }
 table th {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
   padding: 0 0.75rem 0.75rem 0.75rem;
   text-align: left;
 }

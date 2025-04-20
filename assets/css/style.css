@@ -598,8 +598,11 @@ hr.major {
 }
 
 @media screen and (max-width: 736px) {
+  p {
+    font-size: 1.25rem;
+  }
   p.major {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -7411,6 +7414,10 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 ul.icons {
   justify-content: center;
+}
+
+.spotlight {
+  background-color: #f2f6f4;
 }
 
 /*# sourceMappingURL=style.css.map */

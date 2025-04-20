@@ -27,7 +27,7 @@ get_header();
       </ul>
     </div>
     <div class="image">
-      <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_485282986.jpg" alt="" />
+      <img src="/wp-content/uploads/2025/04/shutterstock_485282986.jpg" alt="" />
     </div>
   </section>
 
@@ -144,7 +144,7 @@ get_header();
       </article>
       <article>
         <a href="images/gallery/fulls/06.jpg" class="image">
-          <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
+          <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
         </a>
         <div class="caption">
           <h3>Title</h3>
@@ -156,7 +156,7 @@ get_header();
       </article>
       <article>
         <a href="images/gallery/fulls/07.jpg" class="image">
-          <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_485282986-1.jpg" alt="" />
+          <img src="/wp-content/uploads/2025/04/shutterstock_485282986-1.jpg" alt="" />
         </a>
         <div class="caption">
           <h3>Title</h3>
@@ -168,7 +168,7 @@ get_header();
       </article>
       <article>
         <a href="images/gallery/fulls/08.jpg" class="image">
-          <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_1519196663.jpg" alt="" />
+          <img src="/wp-content/uploads/2025/04/shutterstock_1519196663.jpg" alt="" />
         </a>
         <div class="caption">
           <h3>Title</h3>
@@ -180,7 +180,7 @@ get_header();
       </article>
       <article>
         <a href="images/gallery/fulls/09.jpg" class="image">
-          <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
+          <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
         </a>
         <div class="caption">
           <h3>Title</h3>
@@ -192,7 +192,7 @@ get_header();
       </article>
       <article>
         <a href="images/gallery/fulls/10.jpg" class="image">
-          <img src="http://localhost:8888/hausdogs/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
+          <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
         </a>
         <div class="caption">
           <h3>Title</h3>

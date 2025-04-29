@@ -87,8 +87,8 @@ get_header();
           <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>Grooming</h3>
+          <p>We can wash and groom most dogs.</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
@@ -99,8 +99,8 @@ get_header();
           <img src="/wp-content/uploads/2025/04/shutterstock_1496959820.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>Food</h3>
+          <p>We cater to your dog needs to keep tummies happy</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
@@ -111,8 +111,8 @@ get_header();
           <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>Public Baths</h3>
+          <p>Come in and wash your dog, included with memberships</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
@@ -123,8 +123,8 @@ get_header();
           <img src="/wp-content/uploads/2025/04/shutterstock_1519196663.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>We have eyes everywhere</h3>
+          <p>Strategic game plan for managing accidents</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
@@ -143,24 +143,12 @@ get_header();
         </div>
       </article>
       <article>
-        <a href="images/gallery/fulls/06.jpg" class="image">
-          <img src="/wp-content/uploads/2025/04/shutterstock_2296975477.jpg" alt="" />
-        </a>
-        <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-          <ul class="actions fixed">
-            <li><span class="button small">Details</span></li>
-          </ul>
-        </div>
-      </article>
-      <article>
         <a href="images/gallery/fulls/07.jpg" class="image">
           <img src="/wp-content/uploads/2025/04/shutterstock_485282986-1.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>Won't it be nice</h3>
+          <p>We have dedicated potty areas with turf grass and drainage for cleaning</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
@@ -171,8 +159,8 @@ get_header();
           <img src="/wp-content/uploads/2025/04/shutterstock_1519196663.jpg" alt="" />
         </a>
         <div class="caption">
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+          <h3>Show dogs, dogs we show</h3>
+          <p>Drop in just for dinner or a movie</p>
           <ul class="actions fixed">
             <li><span class="button small">Details</span></li>
           </ul>
